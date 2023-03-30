@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
 	use 'nvim-lualine/lualine.nvim'
 
 	use "natecraddock/workspaces.nvim"
+	use "natecraddock/sessions.nvim"
 
 	use 'goolord/alpha-nvim'
 
