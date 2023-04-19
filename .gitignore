@@ -1,2 +1,8 @@
 nvim/plugin/packer_compiled.lua
+
 configstore/
+
+github-copilot/
+
+# workspace sessions
+.nvim/

@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
 
 	use "folke/which-key.nvim"
 
+	use "github/copilot.vim"
+
 	use {
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end

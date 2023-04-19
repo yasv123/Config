@@ -44,6 +44,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- INSERT MODE --
 keymap("i", "kj", "<Esc>", opts)
+vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- VISUAL MODE --
 -- Stay in indent mode
