@@ -108,6 +108,9 @@ return require('packer').startup(function(use)
 	-- Fugitive
 	use('tpope/vim-fugitive')
 
+	-- DAP
+	use('mfussenegger/nvim-dap')
+
 	-- LSP
 	use {
 		'VonHeikemen/lsp-zero.nvim',
