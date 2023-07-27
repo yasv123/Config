@@ -94,5 +94,12 @@ lsp.on_attach(function(_, bufnr)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+require('lspconfig').volar.setup{
+	init_options = {
+		typescript = {
+			tsdk = '/Users/yveluguleti/.nvm/versions/node/v18.0.0/lib/node_modules/typescript/lib'
+		}
+	}
+}
 
 lsp.setup()
