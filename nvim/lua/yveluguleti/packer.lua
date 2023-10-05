@@ -147,7 +147,15 @@ return require('packer').startup(function(use)
 	})
 
 	-- NVIM Tree
-	use('nvim-tree/nvim-tree.lua')
+	use({
+		'nvim-tree/nvim-tree.lua',
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-tree").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end
+	})
 	use('nvim-tree/nvim-web-devicons')
 
 	-- Automatically set up your configuration after cloning packer.nvim
@@ -155,4 +163,13 @@ return require('packer').startup(function(use)
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
+
+	-- Markdown preview
+	-- install without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+
+	-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
