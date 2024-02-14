@@ -13,6 +13,7 @@ FiraCode Nerd Font
 NOT the mono
 Unzip and install
 
+:e nvim/init.lua (why is this here???)
 # oh-my-zsh
 
 ## plugins
